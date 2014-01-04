@@ -1,0 +1,84 @@
+<!-- INCLUDE overall_header.html -->
+<!-- IF S_USER_LOGGED_IN -->
+<!-- <div class="row">
+	<div class="twelve columns">
+		<div class="panel radius">
+
+
+		
+		</div>
+	</div>
+</div> -->
+<!-- ENDIF -->
+<!-- INCLUDE forumlist_body.html -->
+
+
+
+
+
+<div class="row" style="clear:both">
+<div class="large-12 columns">
+<div class="panel">
+<div class="row">
+	<div class="large-6 columns">
+		
+		
+
+<!-- IF S_DISPLAY_ONLINE_LIST -->
+
+	
+	<!-- IF U_VIEWONLINE --><h3><a href="{U_VIEWONLINE}">{L_WHO_IS_ONLINE}</a></h3><!-- ELSE --><h3>{L_WHO_IS_ONLINE}</h3><!-- ENDIF -->
+	<p>{TOTAL_USERS_ONLINE} ({L_ONLINE_EXPLAIN})<br />{RECORD_USERS}<br /> <br />{LOGGED_IN_USER_LIST}
+	<!-- IF LEGEND --><br /><em>{L_LEGEND}: {LEGEND}</em><!-- ENDIF --></p>
+
+		<!-- ENDIF -->
+
+
+<!-- IF S_DISPLAY_BIRTHDAY_LIST and BIRTHDAY_LIST -->
+
+	<h3>{L_BIRTHDAYS}</h3>
+	<p><!-- IF BIRTHDAY_LIST -->{L_CONGRATULATIONS}: <strong>{BIRTHDAY_LIST}</strong><!-- ELSE -->{L_NO_BIRTHDAYS}<!-- ENDIF --></p>
+
+<!-- ENDIF -->
+
+<!-- IF NEWEST_USER -->
+		<hr>
+		<h3>{NEWEST_USER}</h3>
+		<hr>
+		<!-- ENDIF -->
+		<h3>{L_STATISTICS}</h3>
+		<p>
+			{TOTAL_POSTS}
+			{TOTAL_TOPICS}
+			{TOTAL_USERS}
+		</p>
+</div>
+
+
+	<div class="large-6 columns">
+		
+<!-- IF not S_USER_LOGGED_IN and not S_IS_BOT -->
+		<h3>Log In</h3>
+		<div class="panel">
+			<form method="post" action="{S_LOGIN_ACTION}" class="headerspace">
+				<label for="username">{L_USERNAME}:</label>&nbsp;
+				<input type="text" name="username" id="username" size="10" class="inputbox" title="{L_USERNAME}" />
+				<label for="password">{L_PASSWORD}:</label>&nbsp;
+				<input type="password" name="password" id="password" size="10" class="inputbox" title="{L_PASSWORD}" />
+				<!-- IF S_AUTOLOGIN_ENABLED -->
+				<label for="autologin">{L_LOG_ME_IN} 
+					<input type="checkbox" name="autologin" id="autologin" />
+				</label>
+				<!-- ENDIF -->
+				<input type="submit" name="login" value="{L_LOGIN}" class="button" />
+				{S_LOGIN_REDIRECT}
+			</form>
+		</div>
+<!-- ENDIF -->
+		
+	</div>
+	</div>
+</div>
+</div>
+</div>
+<!-- INCLUDE overall_footer.html -->

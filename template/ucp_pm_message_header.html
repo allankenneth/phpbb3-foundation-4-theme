@@ -1,0 +1,36 @@
+<h2><!-- {L_TITLE} --><!-- IF CUR_FOLDER_NAME --> {CUR_FOLDER_NAME}<!-- ENDIF --> <!-- IF TOTAL_MESSAGES --><span class="round secondary label">{TOTAL_MESSAGES}</span><!-- ENDIF --></h2>
+
+<div class=" clearfix pm-panel-header<!-- IF S_VIEW_MESSAGE --> pm<!-- ENDIF -->">
+
+	
+	<!-- IF FOLDER_STATUS and FOLDER_MAX_MESSAGES neq 0 --><p>{FOLDER_STATUS}</p><!-- ENDIF -->
+
+	<!-- IF U_POST_REPLY_PM or U_POST_NEW_TOPIC or U_FORWARD_PM -->
+		<ul class="button-group radius right">
+			<!-- IF U_POST_REPLY_PM --><li class="pmreply-icon clearfix"><a class="button radius" title="{L_POST_REPLY_PM}" href="{U_POST_REPLY_PM}">{L_POST_REPLY_PM}</a></li>
+			<!-- ELSEIF U_POST_NEW_TOPIC --><li class="newpm-icon"><a class="button radius" href="{U_POST_NEW_TOPIC}" accesskey="n" title="{L_UCP_PM_COMPOSE}">{L_UCP_PM_COMPOSE}</a></li><!-- ENDIF -->
+			<!-- IF U_FORWARD_PM --><li class="forwardpm-icon"><a class="button radius" title="{L_POST_FORWARD_PM}" href="{U_FORWARD_PM}">{L_FORWARD_PM}</a></li><!-- ENDIF -->
+		</ul>
+
+		<!-- IF U_POST_REPLY_PM and S_PM_RECIPIENTS gt 1 -->
+			<div class="reply-all"><a class="button" title="{L_REPLY_TO_ALL}" href="{U_POST_REPLY_ALL}">&raquo; {L_REPLY_TO_ALL}</a></div>
+		<!-- ENDIF -->
+
+	<!-- ENDIF -->
+
+		<!-- IF TOTAL_MESSAGES or S_VIEW_MESSAGE -->
+	<div class="pagination">
+		
+			<!-- IF S_VIEW_MESSAGE --><a class="{S_CONTENT_FLOW_BEGIN}" href="{U_CURRENT_FOLDER}">{L_RETURN_TO} {CUR_FOLDER_NAME}</a><!-- ENDIF -->
+			<!-- IF FOLDER_CUR_MESSAGES neq 0 -->
+				
+				<!-- IF PAGE_NUMBER --><!-- IF PAGINATION --> <span>{PAGINATION}</span><!-- ELSE --> {PAGE_NUMBER}<!-- ENDIF --><!-- ENDIF -->
+			<!-- ENDIF -->
+		
+	</div>
+		<!-- ENDIF -->
+		<div style="clear:both"></div>
+	</div>
+</div>
+
+<form id="viewfolder" method="post" action="{S_PM_ACTION}">

@@ -1,0 +1,280 @@
+.callout {
+	color: #E0E0E0;
+}
+.callout a {
+	color: #FFF;
+}
+.jumpbox a {
+	background: rgba(255,255,255,.8);
+	margin: 1px 0;
+}
+.jumpbox a.selected {
+	background: #2BA6CB;
+	color: #FFF;
+/* 	font-size: 115%; */
+}
+
+.jumpbox a {
+/* 	border-radius: 3px; */
+	display: block;
+	padding: 5px;
+}
+.panel {
+	
+}
+#message {
+	height: 200px;
+}
+.avatar img {
+	height: 20px;
+	position: relative;
+	top: -2px !important;
+	width: 20px;
+}
+
+li.name a {
+	/*text-transform: uppercase;*/
+}
+.topictitle,
+li.name a,
+h1, h2, h3 {
+	/*font-family: 'QuicksandLight', sans-serif;*/
+	/*font-family: 'QuicksandBold';*/
+	font-weight: 300;
+}
+h2 span.label {
+	font-size: 40%;
+}
+.clearboth {
+	clear: both;
+}
+
+#search {
+	/*margin: 9px 0 0 0;*/
+}
+.avatar img {
+	position: relative;
+	top: 5px;
+}
+.forumlist .panel {
+
+}
+.foratitle {
+/* 	white-space: nowrap; */
+}
+.foratitle a small {
+	color: #D9D9D9;
+}
+.topictitle span.label {
+	font-size: 50%;
+}
+[
+.topics {
+	padding: 0 0 5px 0;
+}
+.lastpost {
+	margin: 10px 0 0 0;
+}
+/*.forumlist .panel:hover .poststats {
+	display: block;
+}*/
+.topictitle {
+
+	display: block;
+	/*font-family: 'QuicksandLight', sans-serif;*/
+	font-size: 24px;
+	margin: 0 0 5px 0;
+}
+
+.postpages {
+	/*background: #FFF;*/
+	padding-top: 13px;
+	text-align: right;
+}
+.btn-action {
+	/*margin: 0 0 20px 0;*/
+
+}
+.topicpages {
+	margin: 20px 0;
+}
+.pagination {
+	
+}
+.pagination a,
+.pagination strong {
+	font-size: 18px;
+}
+
+.pagination strong { 
+	background: #2ba6cb;
+	border-radius: 1000px;
+	bottom: 1px; 
+	color: #fff; 
+	display: inline; 
+	font-weight: bold; 
+	line-height: 1; 
+	padding: 1px 7px 2px; 
+	position: relative; 
+	text-align: center; 
+	text-decoration: none; 	
+	white-space: nowrap; 
+	-webkit-border-radius: 50%; 
+	-moz-border-radius: 50%; 
+	-ms-border-radius: 50%; 
+	-o-border-radius: 50%; 
+}
+
+.profile {
+	/*margin: 30px 0 0 0;*/
+}
+.prophoto {
+	margin: 0 20px 0 0;
+}
+.protitle {
+	margin-top: 0;
+}
+.signature {
+	background: rgba(255,255,255,.5);
+	margin: 30px 0 0 0;
+	overflow: hidden;
+	padding: 10px;
+	text-overflow: ellipsis;
+	/*white-space: nowrap;*/
+}
+.quickmodform {
+	margin: 30px 0;
+}
+.quickmod {
+	float: left;
+	width: 200px;
+}
+.topic-actions {
+	margin: 30px 0 0 0;
+}
+.postprofile {
+	margin:0 0 0 0;
+}
+
+.postprofile dt .label {
+	width: 100%;
+}
+.postprofile .th img {
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+}
+.topicpag {
+	background: rgba(255,255,255,.5);
+	font-size: 18px;
+	padding: 10px;
+}
+.forum h3 {
+	margin: 5px 0;
+}
+/* 
+.showforuminfo {
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	z-index: 9;
+}
+ */
+
+.showforuminfo a {
+	/*color: #333;*/
+	font-size: 18px;
+}
+
+.post .ten  {
+	position: relative;
+}
+
+
+.pmsubject {
+	font-size: 20px;
+}
+.author {
+	margin: 0 0 15px 0;
+}
+.author a {
+	font-size: 18px;
+}
+.alphabet {
+	margin: 0 0 30px 0;
+}
+
+
+.stats {
+	margin: 10px 0;
+}
+
+/*
+ * DESKTOPS ONLY
+ */
+
+@media only screen and (min-width: 768px) {
+
+	.info {
+		bottom: 20px;
+		color: #DDD;
+		position: absolute;
+		right: 20px;
+	}
+
+	html,body {
+/* 		background: #DDD; */
+/* 		background: rgb(237,237,237) url('images/hanna-bag.jpg') 50% 0 fixed no-repeat; */
+/* 		background-size: 100%; */
+		/*font-family: 'QuicksandLight', sans-serif;*/
+		/*font-weight: 100;*/
+	}
+	.top-bar-section li a:not(.button) .foundicon-settings,
+	.top-bar-section li a:not(.button) .foundicon-smiley {
+
+		line-height: 40px;
+	}
+	.forum h2 {
+		font-size: 180%;
+	}
+	.forumtitle {
+		/*margin-top: -15px;*/
+	}
+	.forumtitle,
+	.forumtitle a {
+		color: rgba(255,255,255,1);
+		
+	}
+	.panel.callout {
+		background: rgba(43,166,203,.9);
+	}
+	.panel {
+/* 		background: rgba(255,255,255,.90); */
+		border: 0;
+	}
+	.announcement {
+/* 		background: rgba(255,255,255,1); */
+		background: #F1F1F1;
+		border-color: #666 ;
+	}
+
+	.stats {
+		
+	}
+
+	.section-viewtopic .postprofile dt,
+	.section-viewtopic .postprofile dd {
+		text-align: center;
+	}
+
+	.arrow {
+		border-top: 10px solid transparent;
+		border-bottom: 10px solid transparent; 
+		border-right:10px solid #E9E9E9;
+		height: 0; 
+		left: 5px;
+		position: absolute;
+		top: 30px;
+		width: 0; 
+	}
+}

@@ -1,0 +1,89 @@
+
+
+<footer class="row">
+
+	<div class="twelve columns">
+  
+		<!-- IF U_ACP -->
+		<!-- <strong><a href="{U_ACP}">{L_ACP}</a></strong> -->
+		<!-- ENDIF -->
+		<!-- IF TRANSLATION_INFO -->{TRANSLATION_INFO}<!-- ENDIF -->
+		<!-- IF DEBUG_OUTPUT --><br />{DEBUG_OUTPUT}<!-- ENDIF -->
+		<!-- IF not S_IS_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+    
+  </div>
+
+</footer>
+
+  
+  <script src="{T_THEME_PATH}/js/vendor/jquery.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation.min.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.alerts.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.clearing.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.cookie.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.dropdown.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.forms.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.joyride.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.magellan.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.orbit.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.placeholder.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.reveal.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.section.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.tooltips.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.topbar.js"></script>
+  <script src="{T_THEME_PATH}/js/foundation/foundation.offcanvas.js"></script>
+  <script>
+  $(document).foundation();
+
+  </script>
+
+
+<!-- 
+<script src="{T_THEME_PATH}/javascripts/foundation.min.js"></script>
+<script src="{T_THEME_PATH}/javascripts/app.js"></script>
+
+
+ -->
+
+<!-- <script src="{T_THEME_PATH}/javascripts/fancybox/jquery.fancybox.pack.js"></script> -->
+<!-- <script src="{T_THEME_PATH}/javascripts/responsive-tables.js"></script> -->
+<script type="text/javascript">
+$(document).ready(function(){
+  $('.bgselect li a').on('click', function(){ 
+    var id = $(this).attr("id");
+    var image = 'url(/footbag/styles/respond/theme/images/' + id + '.jpg)';
+    // alert(image);
+    $('body').css('background-image', image);
+  });
+  $('.showforadesc').on('click',function(){ 
+    var foo = $(this).attr('data-desc'); 
+    bar = '#' + foo; 
+    $(bar).toggle();
+    return false;
+  });
+});
+	// $(document).ready(function(){
+	// 	$('.forumlist .panel').on('hover', function(){
+	// 		// $(this).next('.poststats').toggle();
+	// 	});
+	// 	$('.showforuminfo a').on('click', function(e){
+	// 		// alert('wtf');
+	// 		$(this).parent().parent().find('.poststats').slideToggle();
+	// 		e.preventDefault();
+	// 	});
+	// 	$(".fancybox").fancybox({type: 'iframe'});
+	// });
+
+  // var _gaq = _gaq || [];
+  // _gaq.push(['_setAccount', 'UA-15051475-4']);
+  // _gaq.push(['_trackPageview']);
+
+  // (function() {
+  //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  // })();
+
+</script>
+</body>
+</html>

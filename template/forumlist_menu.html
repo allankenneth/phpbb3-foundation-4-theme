@@ -1,0 +1,71 @@
+	<div class="row">
+		<div class="large-12 columns">	
+		<p>
+  		  <a class='sidebar-button button' id="sidebarButton" href="#sidebar">Forums</a>
+  		</p>
+  		</div>
+	</div>
+
+
+
+
+
+
+		<div class="row">
+  		<section role="main">
+  			<h3>Welcome to modified.in/Footbag</h3>
+   			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget nulla massa. Sed ultricies posuere tincidunt. Morbi dolor est, aliquet quis egestas eu, consectetur nec neque. Etiam velit libero, congue eu accumsan sit amet, eleifend et sem. Donec ac felis sed sapien placerat venenatis. Fusce id tempus nunc. Vestibulum pellentesque vulputate tempus. Suspendisse sed consequat lectus. Nulla bibendum venenatis eros, elementum malesuada mi imperdiet eu. Fusce ornare gravida nulla, sed scelerisque sem scelerisque at.</p>	
+   			<p>Mauris consectetur elementum massa nec convallis. Integer mauris purus, condimentum vitae mattis a, vehicula lacinia justo. Pellentesque scelerisque orci at ligula cursus eu tempor elit euismod. Donec eleifend, turpis in vulputate eleifend, orci lectus eleifend quam, et ultrices mi nisi id nulla. Nullam est magna, varius nec consectetur vel, pellentesque ac justo. Vivamus commodo pellentesque ante, sed semper nulla congue non. Nunc nec augue sed nibh dapibus accumsan. Nullam in mauris quis lacus ultricies convallis. Morbi semper suscipit elit ut suscipit. Donec lobortis tellus lorem.</p>
+
+
+  		</section>
+
+  		<section id="sidebar" role="complementary">
+				<nav id="sideMenu" role="navigation">
+
+<!-- BEGIN forumrow -->
+	<!-- IF (forumrow.S_IS_CAT and not forumrow.S_FIRST_ROW) or forumrow.S_NO_CAT  -->
+			</ul>
+	<!-- ENDIF -->
+
+	<!-- IF forumrow.S_IS_CAT or forumrow.S_FIRST_ROW  or forumrow.S_NO_CAT  -->
+
+    			<ul id="sideMainNav" class="nav-bar">
+			
+				<li>
+					<!-- IF forumrow.S_IS_CAT -->
+					<a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a>
+					<!-- ELSE --><!-- ENDIF -->
+				</li>
+
+	<!-- ENDIF -->
+
+	<!-- IF not forumrow.S_IS_CAT -->
+
+				<li title="{forumrow.FORUM_FOLDER_IMG_ALT}">
+
+					<!-- style="background-image: url({forumrow.FORUM_FOLDER_IMG_SRC}); background-position: right; background-repeat: no-repeat;"  -->
+				<!-- IF S_ENABLE_FEEDS and forumrow.S_FEED_ENABLED --><!-- <a class="feed-icon-forum" title="{L_FEED} - {forumrow.FORUM_NAME}" href="{U_FEED}?f={forumrow.FORUM_ID}"><img src="{T_THEME_PATH}/images/feed.gif" alt="{L_FEED} - {forumrow.FORUM_NAME}" /></a> --><!-- ENDIF -->
+
+					<!-- IF forumrow.FORUM_IMAGE --><span class="forum-image">{forumrow.FORUM_IMAGE}</span><!-- ENDIF -->
+					<a href="{forumrow.U_VIEWFORUM}">{forumrow.FORUM_NAME}</a>
+				</li>
+
+
+
+	<!-- ENDIF -->
+
+	<!-- IF forumrow.S_LAST_ROW -->
+			</ul>
+
+			
+		
+	<!-- ENDIF -->
+  			
+<!-- BEGINELSE -->
+		
+		<strong>{L_NO_FORUMS}</strong>
+		
+<!-- END forumrow -->
+  		</section>
+		</div>

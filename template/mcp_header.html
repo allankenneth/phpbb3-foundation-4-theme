@@ -1,0 +1,86 @@
+<!-- INCLUDE overall_header.html -->
+<div class="row">
+	<div class="large-12 columns">
+		<div class="panel radius">
+			<div class="row">
+				<div class="large-6 columns">
+					<h2>{L_MCP}</h2>
+				</div>
+				<div class="large-6 columns">
+			<!-- IF U_MCP -->
+				<p class="linkmcp">
+					<!-- <a class="button" href="{U_MCP}">{L_MCP}</a> -->
+					<!-- IF U_MCP_FORUM --><a class="button" href="{U_MCP_FORUM}">{L_MODERATE_FORUM}</a><!-- ENDIF -->
+					<!-- IF U_MCP_TOPIC --> <a class="button" href="{U_MCP_TOPIC}">{L_MODERATE_TOPIC}</a><!-- ENDIF -->
+					<!-- IF U_MCP_POST --> <a class="button" href="{U_MCP_POST}">{L_MODERATE_POST}</a><!-- ENDIF --> 
+				</p>
+				</div>
+			</div>
+<!-- ENDIF -->
+	<dl class="sub-nav">
+
+		<!-- BEGIN l_block1 -->
+		<dt<!-- IF l_block1.S_SELECTED --> class="active"<!-- ENDIF -->><a href="{l_block1.U_TITLE}"><span>{l_block1.L_TITLE}</span></a></dt>
+		<!-- END l_block1 -->
+	</dl>
+		</div>
+	</div>
+</div>
+<div class="row">
+
+	<div class="large-3 columns">
+		<div class="panel">
+<div id="navigation">
+			<ul class="side-nav">
+			<!-- BEGIN l_block1 -->
+			<!-- IF l_block1.S_SELECTED -->
+				<!-- BEGIN l_block2 -->
+				<!-- IF l_block1.l_block2.S_SELECTED -->
+				<li class="active"><a href="{l_block1.l_block2.U_TITLE}"><span>{l_block1.l_block2.L_TITLE}<!-- IF l_block1.l_block2.ADD_ITEM --> ({l_block1.l_block2.ADD_ITEM})<!-- ENDIF --></span></a></li>
+				<!-- ELSE -->
+				<li><a href="{l_block1.l_block2.U_TITLE}"><span>{l_block1.l_block2.L_TITLE}<!-- IF l_block1.l_block2.ADD_ITEM --> ({l_block1.l_block2.ADD_ITEM})<!-- ENDIF --></span></a></li>
+				<!-- ENDIF -->
+				<!-- END l_block2 -->
+			<!-- ENDIF -->
+			<!-- END l_block1 -->
+			</ul>
+		</div>
+		</div>
+	</div>
+
+	<div class="large-9 columns">
+		<div class="panel radius">
+
+
+
+
+<div class="bg3">
+	
+
+	<div style="width: 100%;">
+
+
+	<div id="cp-main" class="mcp-main">
+		<!-- IF MESSAGE -->
+		<div class="content">
+			<h2>{L_MESSAGE}</h2>
+			<p class="error">{MESSAGE}</p>
+			<p><!-- BEGIN return_links -->{return_links.MESSAGE_LINK}<br /><br /><!-- END return_links --></p>
+		</div>
+		<!-- ENDIF -->
+
+		<!-- IF CONFIRM_MESSAGE -->
+			<form id="confirm" method="post" action="{S_CONFIRM_ACTION}"{S_FORM_ENCTYPE}>
+
+			<div class="content">
+				<h2>{L_PLEASE_CONFIRM}</h2>
+				<p>{CONFIRM_MESSAGE}</p>
+			
+				<fieldset class="submit-buttons">
+					{S_HIDDEN_FIELDS}<input class="button1" type="submit" name="submit" value="{L_YES}" />&nbsp; 
+					<input class="button2" type="cancel" value="{L_NO}" />
+				</fieldset>
+			</div>
+
+			</form>
+		<!-- ENDIF -->
